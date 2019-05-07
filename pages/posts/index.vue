@@ -6,13 +6,13 @@
 
     <h2>Posts</h2>
 
-    <article v-for="post in posts" :key="post.slug">
+    <article v-for="post in posts" :key="post.id">
       <h3>
-        <nuxt-link :to="{ name: 'posts-slug', params: { slug: post.slug } }">
+        <nuxt-link :to="{ name: 'posts-id', params: { id: post.id } }">
           {{ post.title }}
         </nuxt-link>
       </h3>
-      <p>{{ post.content }}</p>
+      <p>{{ post.body }}</p>
     </article>
   </div>
 </template>
@@ -22,6 +22,8 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'Posts',
+
+  layout: 'blog',
 
   head() {
     return {
@@ -39,6 +41,10 @@ export default {
     ...mapGetters({
       posts: 'posts/getList'
     })
+  },
+
+  async fetch({ store, params }) {
+    await store.dispatch('posts/loadPosts')
   }
 }
 </script>

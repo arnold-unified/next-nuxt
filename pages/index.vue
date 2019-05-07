@@ -8,6 +8,8 @@
 export default {
   name: 'Home',
 
+  layout: 'blog',
+
   head() {
     return {
       title: 'Next, Nuxt!',

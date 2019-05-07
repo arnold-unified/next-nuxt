@@ -28,6 +28,8 @@
 export default {
   name: 'CreatePost',
 
+  layout: 'blog',
+
   head() {
     return {
       title: 'Create Post - Next, Nuxt!'
