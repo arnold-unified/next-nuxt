@@ -1,10 +1,15 @@
 <template>
   <div>
     <h1>Next, Nuxt!</h1>
+
+    <text-block />
+    <text-block />
   </div>
 </template>
 
 <script>
+import TextBlock from '~/components/editor/blocks/Text.vue'
+
 export default {
   name: 'Home',
 
@@ -20,6 +25,10 @@ export default {
         { name: 'twitter:card', content: 'summary_large_image' }
       ]
     }
+  },
+
+  components: {
+    TextBlock
   }
 }
 </script>

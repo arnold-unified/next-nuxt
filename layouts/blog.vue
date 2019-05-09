@@ -26,8 +26,8 @@ body {
 }
 #app {
   box-sizing: border-box;
-  width: 500px;
-  padding: 0 20px 20px;
+  width: 100%;
+  padding: 0 80px 80px;
   margin: 0 auto;
 }
 hr {

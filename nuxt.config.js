@@ -21,20 +21,25 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#39b982' },
 
   /*
   ** Global CSS
   */
   css: [
-  '~/assets/main.css'
+    'quill/dist/quill.snow.css',
+    'quill/dist/quill.bubble.css',
+    'quill/dist/quill.core.css',
+    '~/assets/main.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/vue-inject.client.js'
+    '~/plugins/vue-inject.client',
+    '~/plugins/axios',
+    { src: '~/plugins/quill', ssr: false }
   ],
 
   /*
